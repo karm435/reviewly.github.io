@@ -611,6 +611,127 @@ section {
     background: var(--bg-secondary);
 }
 
+.mcp-section {
+    background: var(--bg-primary);
+}
+
+.mcp-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.mcp-content h2 {
+    margin-bottom: 1.25rem;
+}
+
+.mcp-content p {
+    font-size: 1.125rem;
+}
+
+.mcp-points {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.mcp-point {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.mcp-point i {
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--gradient-accent);
+    color: white;
+}
+
+.mcp-point span {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.mcp-image-wrap {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+.mcp-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.macos-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.macos-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+.macos-card-large {
+    grid-column: 1 / -1;
+}
+
+.macos-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.macos-card:hover img {
+    transform: scale(1.02);
+}
+
+.macos-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem 1rem 1rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+}
+
 .ipad-images {
     display: flex;
     flex-direction: column;
@@ -890,6 +1011,23 @@ section {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 2rem;
+    }
+
+    .mcp-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .mcp-content {
+        text-align: center;
+    }
+
+    .mcp-point {
+        text-align: left;
+    }
+
+    .macos-gallery {
+        grid-template-columns: 1fr;
     }
 
     .ipad-main {
